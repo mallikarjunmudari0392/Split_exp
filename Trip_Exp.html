@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: rgb(240, 68, 38); font-family: 'Times New Roman', Times, serif;">Shared Expense Tracker</h1>
+        <form id="tripForm">
+            <div class="form-group">
+                <label for="numPeople">Enter number of people:</label>
+                <input type="number" id="numPeople" required>
+                <button id="ok" type="button" onclick="generateFields()">OK</button>
+            </div>
+            <div id="inputFields"></div>
+            <button type="button" onclick="calculateExpenses()" style="display:none;" id="calculateButton">Calculate</button>
+        </form>
+        <div id="resultArea" style="display:none;">
+            <h2 style="color: purple;">Result</h2>
+            <p id="totalSpent"></p>
+            <p id="averageContribution"></p>
+            <div id="balances"></div>
+            <div id="settlements"></div>
+        </div>
+
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
